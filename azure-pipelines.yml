@@ -16,7 +16,7 @@ steps:
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: 'JuiceShopKey'
-    cliProjectName: 'iceShop'
+    cliProjectName: 'JuiceShop'
     cliSources: '.'
 - task: NodeTool@0
   inputs:
@@ -32,3 +32,6 @@ steps:
 - task: SonarQubePublish@4
   inputs:
     pollingTimeoutSec: '300'
+- task: WhiteSource Bolt@20
+  inputs:
+    cwd: '.'
